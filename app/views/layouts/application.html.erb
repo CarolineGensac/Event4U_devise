@@ -36,6 +36,7 @@
             <% if user_signed_in? %>
               <li><a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete">Sign out</a></li>
               <li><a class="dropdown-item" href="<%= edit_user_registration_path %>">Edit email / password</a></li>
+              <li><a class="dropdown-item" href="<%= users_path(current_user) %>">Profil</a></li>
                 <% else %>
               <li><a class="dropdown-item" href="<%= new_user_session_path %>">Log in</a></li>
               <li><a class="dropdown-item" href="<%= new_user_registration_path %>">Registration</a></li>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: redirect('/events')
+  root to: "events#index"
+  #redirect('/events')
   resources :events
   resources :attendances
+  get '/users', to: 'users#show'
   
 
   devise_for :users
